@@ -3,7 +3,7 @@ Simple pong game
 
 ## Multiplayer
 
-There is 2 mode aviables :
+There is 2 mode available :
 - Player vs Player
 - Player vs AI
 
