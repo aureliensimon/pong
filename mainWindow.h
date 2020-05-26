@@ -12,14 +12,14 @@ class MainWindow : public QMainWindow {
         MainWindow();
         ~MainWindow();
         QGroupBox * BuildGroupBoxControle();
-        
-    public slots:
     
     private:
         QWidget * widget_general;
         QMenu * menuFichier;
         QGraphicsScene * myscene;
         QGraphicsView * myview;
+    
+    public slots:
 };
 
 #endif

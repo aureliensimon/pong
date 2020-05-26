@@ -16,8 +16,3 @@ MainWindow::MainWindow() : QMainWindow() {
 }
 
 MainWindow::~MainWindow() { }
-
-QGroupBox * MainWindow::BuildGroupBoxControle() {
-    QGroupBox * qgb = new QGroupBox(tr("Contrôle"));
-    return qgb; 
-} 

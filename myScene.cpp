@@ -82,6 +82,20 @@ void MyScene::update () {
     }
     // Mise à jour de la position de la balle
     ball->setPos(ball->x() + xSpeed * goLeft, ball->y() + ySpeed * goDown);
+
+    // Si l'IA joue
+    if (AI) {
+        // Si la balle n'est plus dans le premier tier du terrain, permettre à l'ia de bouger (plus réaliste)
+        if (ball->x() > BOARD_WIDTH / 3) {
+            if (paddleP2->y() + BOARD_HEIGHT / 2 > ball->y()) {
+                // bouger vers le haut
+                if (paddleP2->y() > BOARD_HEIGHT / -2 + PADDLE_SIZE / 2) paddleP2->setPos(paddleP2->x(), paddleP2->y() - AI_LEVEL);
+            } else {
+                // bouger vers le bas
+                if (paddleP2->y() < BOARD_HEIGHT / 2 - PADDLE_SIZE / 2) paddleP2->setPos(paddleP2->x(), paddleP2->y() + AI_LEVEL);
+            }
+        }
+    }
 }
 
 void MyScene::keyPressEvent (QKeyEvent * e) {
@@ -90,10 +104,10 @@ void MyScene::keyPressEvent (QKeyEvent * e) {
     */
     switch (e->key()) {
         case Qt::Key_Up:
-            if (paddleP2->y() > BOARD_HEIGHT / -2 + PADDLE_SIZE / 2) paddleP2->setPos(paddleP2->x(), paddleP2->y() - SENSI);
+            if (paddleP2->y() > BOARD_HEIGHT / -2 + PADDLE_SIZE / 2 && !AI) paddleP2->setPos(paddleP2->x(), paddleP2->y() - SENSI);
             break;
         case Qt::Key_Down:
-            if (paddleP2->y() < BOARD_HEIGHT / 2 - PADDLE_SIZE / 2) paddleP2->setPos(paddleP2->x(), paddleP2->y() + SENSI);
+            if (paddleP2->y() < BOARD_HEIGHT / 2 - PADDLE_SIZE / 2 && !AI) paddleP2->setPos(paddleP2->x(), paddleP2->y() + SENSI);
             break;
         case Qt::Key_Shift:
             if (paddleP1->y() > BOARD_HEIGHT / -2 + PADDLE_SIZE / 2) paddleP1->setPos(paddleP1->x(), paddleP1->y() - SENSI);
