@@ -16,8 +16,8 @@ There is 2 mode available :
 
 ### PvE
 
-By default, you are playing two players mode, if you want to play against an AI, set
-AI to 1 in myScene.h line 24.
+By default, you are playing against an AI, if you want to play multiplayer, set
+AI to 0 in myScene.h line 24.
 
 Control the difficulty with AI_level in myScene.h line 25, the more it is, the harder it will be.
 
