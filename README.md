@@ -14,7 +14,7 @@ There is 2 mode available :
 | up | Shift | ↑ |
 | down | Ctrl | ↓ |
 
-### PvE
+### PvE
 
 By default, you are playing two players mode, if you want to play against an AI, set
 AI to 1 in myScene.h line 24.
