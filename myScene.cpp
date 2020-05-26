@@ -115,5 +115,17 @@ void MyScene::keyPressEvent (QKeyEvent * e) {
         case Qt::Key_Control:
             if (paddleP1->y() < BOARD_HEIGHT / 2 - PADDLE_SIZE / 2) paddleP1->setPos(paddleP1->x(), paddleP1->y() + SENSI);
             break;
+        case Qt::Key_Backspace:
+            // Reset game
+            // Mise à jour des scores
+            scoreP1 = 0;
+            scoreP2 = 0;
+            p1Score->setPlainText(QString::number(scoreP1));
+            p2Score->setPlainText(QString::number(scoreP2));
+            // Remise au centre
+            ball->setPos(BOARD_WIDTH / 2 , BOARD_HEIGHT / 2);
+            // Remise à l'état initial de la vitesse de la balle
+            xSpeed = 3;
+            ySpeed = 3;
     }
 }

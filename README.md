@@ -13,6 +13,7 @@ There is 2 mode available :
 | --- | --- | --- |
 | up | Shift | ↑ |
 | down | Ctrl | ↓ |
+| reset | Backspace | Backspace |
 
 ### PvE
 
