@@ -1,8 +1,7 @@
 # pong
-
 Simple pong game 
 
-## Multiplayer
+## Multiplayer
 
 There is 2 mode aviables :
 - Player vs Player
