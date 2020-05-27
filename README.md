@@ -1,5 +1,13 @@
 # pong
-Simple pong game 
+Simple pong game
+
+## Install
+
+To create the makefile and the exe file
+```
+$ > qmake pong.pro
+$ > make
+```
 
 ## Multiplayer
 
