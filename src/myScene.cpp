@@ -1,4 +1,4 @@
-#include "myScene.h"
+#include "../headers/myScene.h"
 
 MyScene::MyScene(QObject *parent) : QGraphicsScene(parent){
 
@@ -9,7 +9,7 @@ MyScene::MyScene(QObject *parent) : QGraphicsScene(parent){
     p1Score = new QGraphicsTextItem(QString::number(scoreP1));
     p2Score = new QGraphicsTextItem(QString::number(scoreP2));
     winner = new QGraphicsTextItem("");
-    ball = new QGraphicsPixmapItem(QPixmap("balle.png"));
+    ball = new QGraphicsPixmapItem(QPixmap("img/balle.png"));
 
     // Mise en couleur des textes et des raquettes en blanc
     paddleP1->setBrush(QBrush(Qt::white));

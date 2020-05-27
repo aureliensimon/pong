@@ -22,7 +22,7 @@
 *   Le niveau permet de controller à quelle vitesse l'ia peut se déplacer
 */
 #define AI 1
-#define AI_LEVEL 3
+#define AI_LEVEL 4
 
 class MyScene : public QGraphicsScene {
     Q_OBJECT

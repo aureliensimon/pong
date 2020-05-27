@@ -1,4 +1,4 @@
-#include "mainWindow.h"
+#include "../headers/mainWindow.h"
 
 MainWindow::MainWindow() : QMainWindow() {
     // le widget dans lequel tout s'affiche
